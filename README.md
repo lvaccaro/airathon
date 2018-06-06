@@ -1,7 +1,16 @@
 AirAthon
 ===
-AirAthon - team DELTA - winner 2' place.
+#AirAthon 2018 - team DELTA - winner 2' place.
 
+## TEAM
+* Luca Vaccaro <l.vaccaro@merkur.io> Merkur.io 
+* Thomas Rossi <t.rossi@merkur.io> Merkur.io 
+* Mauro Luoni <mauro@impersive.com> Impersive
+* Gerardo Volpone <GerardoGabriele.Volpone@it.ey.com> EY
+* Salvatore D'Onofrio <salvatore.donofrio@leonardocompany.com> Leonardo
+* A. M.  Aeronautica Militare
+
+![team DELTA](https://github.com/lvaccaro/airathon/raw/master/photo.jpg)
 
 ## RESOURCES
 * doc [Eth distribution on Azure](https://github.com/lvaccaro/airathon/blob/master/Azure.md)
@@ -11,12 +20,3 @@ AirAthon - team DELTA - winner 2' place.
 * sol [smart contract for Tracking](https://github.com/lvaccaro/airathon/blob/master/services/Reports.sol)
 * nodejs [Web server for services](https://github.com/lvaccaro/airathon/blob/master/services)
 * html [Public frontend](https://github.com/lvaccaro/airathon/blob/master/services/public)
-
-
-## TEAM
-* Luca Vaccaro <l.vaccaro@merkur.io> Merkur.io 
-* Thomas Rossi <t.rossi@merkur.io> Merkur.io 
-* Mauro Luoni <mauro@impersive.com> Impersive
-* Gerardo Volpone <GerardoGabriele.Volpone@it.ey.com> EY
-* Salvatore D'Onofrio <salvatore.donofrio@leonardocompany.com> Leonardo
-* A. M.  Aeronautica Militare
