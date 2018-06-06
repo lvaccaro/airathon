@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet"></head>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>AirAthon - Team Delta</h1>
+        <p><span id="number"></span> Numero delle risorse totali accedute per utente</p>
+    </div>
+    
+    <div class="card">
+        <h3 class="card-header primary-color white-text">Setup risorse</h3>
+        <div class="card-body">
+        
+         <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="code_user">Codice utente</label>
+                        <input type="text" id="code_user" class="form-control" value="1234"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Motivazione</label>
+                        <input type="text" id="description" class="form-control" value="lezione5"/>
+                    </div>
+                    <button class="btn btn-primary" id="btn">VALIDAZIONE</button>
+                    <div class="form-group">
+                        <label for="commitment">Commitment generato dallo smart contract*</label>
+                        <input type="text" id="commitment" class="form-control" />
+                    </div>
+                    <button class="btn btn-primary" id="btnVideo">CONTINUA A SELEZIONARE IL VIDEO</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+	<!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+    
+    <script>
+    	$("#btnVideo").click(function(event){
+    		event.preventDefault();
+    		window.location.href = "http://40.121.41.140/second.html?commitment="+$("#commitment").val();
+    		return false;
+    	});
+    	$("#btn").click(function(event){
+    		event.preventDefault();
+    		
+    		var code_user= $("#code_user").val();
+    		var description= $("#description").val();
+    		$.get( "http://40.121.41.140/storage/new_access?code_user="+code_user+"&description="+description, function( data ) {
+  				console.log( data );
+  				
+  				$.get( "http://40.121.41.140/storage/get_commitment?code_user="+code_user, function( data ) {
+  					console.log( data );
+  					$("#commitment").val(data);
+  					number();
+  				});
+  				
+			});
+    		
+    		return false;
+    	});
+    	
+    	function number(){
+    		$.get( "http://40.121.41.140/storage/count_access", function( data ) {
+  				console.log( data );
+  				$("#number").html(data);
+  			});
+    	}
+    	
+    	number();
+    </script>
+    
+    
+    </body>
+</html>
