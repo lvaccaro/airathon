@@ -8,6 +8,7 @@ AirAthon
 * Mauro Luoni <mauro@impersive.com> Impersive
 * Gerardo Volpone <GerardoGabriele.Volpone@it.ey.com> EY
 * Salvatore D'Onofrio <salvatore.donofrio@leonardocompany.com> Leonardo
+* Claudio De lista Vitrociset
 * A. M.  Aeronautica Militare
 
 ![team DELTA](https://github.com/lvaccaro/airathon/raw/master/photo.jpg)
