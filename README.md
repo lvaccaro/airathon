@@ -14,6 +14,7 @@ AirAthon
 ![team DELTA](https://github.com/lvaccaro/airathon/raw/master/photo.jpg)
 
 ## RESOURCES
+* pdf [Presentation](https://github.com/lvaccaro/airathon/raw/master/Delta.pdf)
 * doc [Eth distribution on Azure](https://github.com/lvaccaro/airathon/blob/master/Azure.md)
 * doc [Smart-contract in solidity](https://github.com/lvaccaro/airathon/blob/master/Contract.md)
 * doc [Deploy & Interact with smart contract on web3](https://github.com/lvaccaro/airathon/blob/master/Web3.md)
